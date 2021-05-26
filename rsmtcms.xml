@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.0
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: May 26, 2021 at 04:11 PM
+- Server version: 10.4.19-MariaDB
+- PHP Version: 8.0.6
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="rsmtcms" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="admin">
+                CREATE TABLE `admin` (
+                  `id` int(5) NOT NULL AUTO_INCREMENT,
+                  `email` varchar(20) NOT NULL,
+                  `password` varchar(20) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="course">
+                CREATE TABLE `course` (
+                  `course_id` int(10) NOT NULL,
+                  `course_name` varchar(8) NOT NULL,
+                  `course_duration` int(5) NOT NULL,
+                  PRIMARY KEY (`course_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="department">
+                CREATE TABLE `department` (
+                  `department_id` int(10) NOT NULL,
+                  `department_name` varchar(20) NOT NULL,
+                  PRIMARY KEY (`department_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="faculty">
+                CREATE TABLE `faculty` (
+                  `fac_id` int(10) NOT NULL,
+                  `fac_name` varchar(20) NOT NULL,
+                  `fac_add` varchar(40) NOT NULL,
+                  `fac_depart` varchar(5) NOT NULL,
+                  `fac_contact` int(12) NOT NULL,
+                  `email` varchar(30) NOT NULL,
+                  `password` int(20) NOT NULL,
+                  PRIMARY KEY (`fac_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="student">
+                CREATE TABLE `student` (
+                  `std_id` int(10) NOT NULL AUTO_INCREMENT,
+                  `std_name` varchar(20) NOT NULL,
+                  `std_father_name` varchar(20) NOT NULL,
+                  `std_course` varchar(8) NOT NULL,
+                  `std_add` varchar(40) NOT NULL,
+                  `std_contact` bigint(20) NOT NULL,
+                  `email` varchar(30) NOT NULL,
+                  `password` varchar(20) NOT NULL,
+                  `std_gender` varchar(8) NOT NULL,
+                  PRIMARY KEY (`std_id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'rsmtcms'
+    -->
+    <database name="rsmtcms">
+        <!-- Table admin -->
+        <table name="admin">
+            <column name="id">1</column>
+            <column name="email">admin1@gmail.com</column>
+            <column name="password">admin1</column>
+        </table>
+        <!-- Table course -->
+        <!-- Table department -->
+        <!-- Table faculty -->
+        <table name="faculty">
+            <column name="fac_id">0</column>
+            <column name="fac_name">Karima Anand</column>
+            <column name="fac_add"></column>
+            <column name="fac_depart"></column>
+            <column name="fac_contact">0</column>
+            <column name="email">karimaanand@gmail.com</column>
+            <column name="password">12345</column>
+        </table>
+        <!-- Table student -->
+        <table name="student">
+            <column name="std_id">1</column>
+            <column name="std_name">Sheikh Abdun Nur</column>
+            <column name="std_father_name">Sheikh Ali Qurban</column>
+            <column name="std_course">BCA</column>
+            <column name="std_add"></column>
+            <column name="std_contact">7499116099</column>
+            <column name="email">san06190@gmail.com</column>
+            <column name="password">150420</column>
+            <column name="std_gender">Male</column>
+        </table>
+        <table name="student">
+            <column name="std_id">2</column>
+            <column name="std_name">Tarun Kumar Gupta</column>
+            <column name="std_father_name">Yogesh Kumar Gupta</column>
+            <column name="std_course">BCA</column>
+            <column name="std_add">F1,IDH COLONY,KAZZAKPURA,VARANASI,UP</column>
+            <column name="std_contact">8736983188</column>
+            <column name="email">princtarun35@gmail.com</column>
+            <column name="password">100799</column>
+            <column name="std_gender">Male</column>
+        </table>
+        <table name="student">
+            <column name="std_id">3</column>
+            <column name="std_name">Vineet Chaubey</column>
+            <column name="std_father_name"></column>
+            <column name="std_course">BCA</column>
+            <column name="std_add"></column>
+            <column name="std_contact">8765920374</column>
+            <column name="email"></column>
+            <column name="password"></column>
+            <column name="std_gender">Male</column>
+        </table>
+    </database>
+</pma_xml_export>
